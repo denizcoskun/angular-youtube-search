@@ -1,0 +1,17 @@
+  <md-card>
+  <md-card-header>
+
+    <md-card-title>{{result.title}}</md-card-title>
+    <md-card-subtitle>{{result.videoUrl}}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image [src]="result.thumbnailUrl">
+  <md-card-content>
+    <p>
+      {{result.description}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>

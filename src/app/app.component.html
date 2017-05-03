@@ -1,0 +1,16 @@
+<md-toolbar color="accent">Youtube</md-toolbar>
+<div fxLayout="column">
+  <div fxLayoutAlign="center">
+<form class="example-form" [style.margin.px]="24" >
+  <md-input-container [style.fontSize.px]="18">
+    <input #input mdInput placeholder="Search..." autofocus>
+  </md-input-container></form>
+  </div>
+  <div fxLayoutAlign="center">
+  <md-progress-spinner *ngIf="loading | async" mode="indeterminate"></md-progress-spinner>
+  </div>
+<div fxLayout="row" fxLayoutWrap fxLayoutAlign="center">
+  <app-card fxFlex="300px" [style.margin.px]="20" class="example-card" *ngFor="let result of results" [result]="result"></app-card>
+
+</div>
+</div>
